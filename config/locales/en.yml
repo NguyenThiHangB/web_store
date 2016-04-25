@@ -1,0 +1,19 @@
+en:
+  partials:
+    topnav:
+      username: "Username"
+      profile: "Profile"
+      settings: "Settings"
+      help: "Help"
+      logout: "Log out"
+    sidenav:
+      title: "Store"
+      welcome: "Welcome"
+      username: "Username"
+      general: "General"
+      home: "Home"
+
+  admin:
+    plainpage:
+      index:
+        title: "Admin"
