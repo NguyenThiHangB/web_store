@@ -11,7 +11,21 @@ en:
       welcome: "Welcome"
       username: "Username"
       general: "General"
-      home: "Home"
+      home: "Website"
+      introduce: "Introduce"
+      menu: "Menu"
+      slide: "Slide"
+      product: "Products"
+      group_product: "Group product"
+      new: "News"
+      type_new: "Type news"
+      customer: "Customers"
+      contact: "Contacts"
+      order: "Orders"
+      advertises: "Advertises"
+      advertisers: "Advertisers"
+      users: "Users"
+      statistics: "Statistics"
 
   admin:
     plainpage:

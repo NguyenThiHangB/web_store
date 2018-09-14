@@ -1,0 +1,2 @@
+class TypeNew < ApplicationRecord
+end
