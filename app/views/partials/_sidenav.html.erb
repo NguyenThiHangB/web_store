@@ -1,104 +1,75 @@
-<div class="main_container">
-  <div class="col-md-3 left_col">
-    <div class="left_col scroll-view">
-      <div class="profile">
-        <div class="profile_pic">
-          <%= image_tag "img.jpg", class: "img-circle profile_img" %>
-        </div>
-        <div class="profile_info">
-          <span><%= t ".welcome" %></span>
-          <h2><%= t ".username" %></h2>
-        </div>
-      </div>
-      <div class="clearfix"></div>
-      <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-        <div class="menu_section">
-          <ul class="nav side-menu">
-            <li>
-              <a>
-                <i class="fa fa-home"></i> <%= t ".home" %>
-                <span class="fa fa-chevron-down"></span>
-              </a>
-              <ul class="nav child_menu" style="display: none">
-                <li><a href="index.html"><%= t ".introduce" %></a></li>
-                <li><a href="index.html"><%= t ".menu" %></a></li>
-                <li><a href="index2.html"><%= t ".slide" %></a></li>
-              </ul>
-            </li>
-            <li>
-              <a>
-                <i class="fa fa-list-alt"></i> <%= t ".product" %>
-                <span class="fa fa-chevron-down"></span>
-              </a>
-              <ul class="nav child_menu" style="display: none">
-                <li><a href="index.html"><%= t ".group_product" %></a></li>
-                <li><a href="index2.html"><%= t ".product" %></a></li>
-              </ul>
-            </li>
-            <li>
-              <a>
-                <i class="fa fa-address-book-o"></i> <%= t ".customer" %>
-                <span class="fa fa-chevron-down"></span>
-              </a>
-              <ul class="nav child_menu" style="display: none">
-                <li><a href="index.html"><%= t ".customer" %></a></li>
-                <li><a href="index2.html"><%= t ".contact" %></a></li>
-              </ul>
-            </li>
-            <li>
-              <a>
-                <i class="fa fa-fw fa-pencil-square-o"></i> <%= t ".order" %>
-                <span class="fa fa-chevron-down"></span>
-              </a>
-            </li>
-            <li>
-              <a>
-                <i class="fa fa-fw fa-table"></i> <%= t ".new" %>
-                <span class="fa fa-chevron-down"></span>
-              </a>
-              <ul class="nav child_menu" style="display: none">
-                <li><a href="index.html"><%= t ".type_new" %></a></li>
-                <li><a href="index2.html"><%= t ".new" %></a></li>
-              </ul>
-            </li>
-            <li>
-              <a>
-                <i class="fa fa-user-circle"></i> <%= t ".advertises" %>
-                <span class="fa fa-chevron-down"></span>
-              </a>
-              <ul class="nav child_menu" style="display: none">
-                <li><a href="index.html"><%= t ".advertises" %></a></li>
-                <li><a href="index2.html"><%= t ".advertisers" %></a></li>
-              </ul>
-            </li>
-            <li>
-              <a>
-                <i class="fa fa-users"></i> <%= t ".users" %>
-                <span class="fa fa-chevron-down"></span>
-              </a>
-            </li>
-            <li>
-              <a>
-                <i class="fa fa-fw fa-bar-chart-o"></i> <%= t ".statistics" %>
-                <span class="fa fa-chevron-down"></span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="sidebar-footer hidden-small">
-        <a data-toggle="tooltip" data-placement="top" title="Settings">
-          <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+  <div class="menu_section">
+    <ul class="nav side-menu">
+      <li>
+        <a>
+          <i class="fa fa-home"></i> <%= t ".home" %>
+          <span class="fa fa-chevron-down"></span>
         </a>
-        <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-          <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+        <ul class="nav child_menu" style="display: none">
+          <li><%= link_to t(".introduces"), admin_introduces_path %></li>
+          <li><a href="index.html"><%= t ".menu" %></a></li>
+          <li><a href="index2.html"><%= t ".slide" %></a></li>
+        </ul>
+      </li>
+      <li>
+        <a>
+          <i class="fa fa-list-alt"></i> <%= t ".product" %>
+          <span class="fa fa-chevron-down"></span>
         </a>
-        <a data-toggle="tooltip" data-placement="top" title="Lock">
-          <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+        <ul class="nav child_menu" style="display: none">
+          <li><a href="index.html"><%= t ".group_product" %></a></li>
+          <li><a href="index2.html"><%= t ".product" %></a></li>
+        </ul>
+      </li>
+      <li>
+        <a>
+          <i class="fa fa-address-book-o"></i> <%= t ".customer" %>
+          <span class="fa fa-chevron-down"></span>
         </a>
-        <a data-toggle="tooltip" data-placement="top" title="Logout">
-          <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+        <ul class="nav child_menu" style="display: none">
+          <li><a href="index.html"><%= t ".customer" %></a></li>
+          <li><a href="index2.html"><%= t ".contact" %></a></li>
+        </ul>
+      </li>
+      <li>
+        <a>
+          <i class="fa fa-fw fa-pencil-square-o"></i> <%= t ".order" %>
+          <span class="fa fa-chevron-down"></span>
         </a>
-      </div>
-    </div>
+      </li>
+      <li>
+        <a>
+          <i class="fa fa-fw fa-table"></i> <%= t ".new" %>
+          <span class="fa fa-chevron-down"></span>
+        </a>
+        <ul class="nav child_menu" style="display: none">
+          <li><a href="index.html"><%= t ".type_new" %></a></li>
+          <li><a href="index2.html"><%= t ".new" %></a></li>
+        </ul>
+      </li>
+      <li>
+        <a>
+          <i class="fa fa-user-circle"></i> <%= t ".advertises" %>
+          <span class="fa fa-chevron-down"></span>
+        </a>
+        <ul class="nav child_menu" style="display: none">
+          <li><a href="index.html"><%= t ".advertises" %></a></li>
+          <li><a href="index2.html"><%= t ".advertisers" %></a></li>
+        </ul>
+      </li>
+      <li>
+        <a>
+          <i class="fa fa-users"></i> <%= t ".users" %>
+          <span class="fa fa-chevron-down"></span>
+        </a>
+      </li>
+      <li>
+        <a>
+          <i class="fa fa-fw fa-bar-chart-o"></i> <%= t ".statistics" %>
+          <span class="fa fa-chevron-down"></span>
+        </a>
+      </li>
+    </ul>
   </div>
+</div>

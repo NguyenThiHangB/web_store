@@ -1,0 +1,9 @@
+paginate:
+  per_page: 20
+  rows: 5
+
+introduce:
+  name:
+    length: 50
+  image:
+    size: 5

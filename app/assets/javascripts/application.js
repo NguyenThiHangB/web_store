@@ -43,3 +43,4 @@
 //= require  js/nprogress.js
 
 //= require flash.js
+//= require ckeditor/init

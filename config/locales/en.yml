@@ -6,10 +6,11 @@ en:
       settings: "Settings"
       help: "Help"
       logout: "Log out"
-    sidenav:
-      title: "Store"
+    menu_profile:
       welcome: "Welcome"
       username: "Username"
+    sidenav:
+      title: "Store"
       general: "General"
       home: "Website"
       introduce: "Introduce"
@@ -28,6 +29,55 @@ en:
       statistics: "Statistics"
 
   admin:
+    buttons:
+      cancel: "Cancel"
+      reset: "Reset"
+      save: "Save"
+
+    shared:
+      error_messages:
+        error: "The form contains"
+        pluralize: "error"
+    image_size:
+      max: "Image should be less than 5MB"
+
     plainpage:
       index:
         title: "Admin"
+
+    introduces:
+      index:
+        title: "Introduces"
+        title_content: "List introduces"
+        search: "Search"
+        placeholder: "Search name or description."
+        stt: "STT"
+        name: "Name"
+        image: "Image"
+        description: "Description"
+        active: "Active"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "You sure delete?"
+        create: "New introduce"
+      new:
+        title: "Introduces"
+        title_content: "Create introduce"
+      edit:
+        title: "Introduce"
+        title_content: "Edit introduce"
+        danger: "This introduce is not exist."
+      form:
+        name: "Name"
+        image: "Image"
+        description: "Description"
+      create:
+        success: "Create introduce success!"
+        error: "Create introduce not success."
+      update:
+        success: "Update introduce success!"
+        error: "Update introduce not success."
+      destroy:
+        success: "Delete introduce success!"
+        error: "Delete introduce not success."
+
