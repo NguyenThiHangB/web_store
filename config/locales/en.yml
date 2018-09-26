@@ -33,24 +33,32 @@ en:
       cancel: "Cancel"
       reset: "Reset"
       save: "Save"
+      delete: "Delete"
 
     shared:
       error_messages:
         error: "The form contains"
         pluralize: "error"
+
     image_size:
       max: "Image should be less than 5MB"
+
+    results:
+      search: "Results search"
 
     plainpage:
       index:
         title: "Admin"
+      modal:
+        confirm: "Confirm"
+        message: "You sure delete this record?"
 
     introduces:
       index:
         title: "Introduces"
         title_content: "List introduces"
         search: "Search"
-        placeholder: "Search name or description."
+        placeholder: "Search name or description"
         stt: "STT"
         name: "Name"
         image: "Image"
@@ -80,4 +88,45 @@ en:
       destroy:
         success: "Delete introduce success!"
         error: "Delete introduce not success."
+
+    menus:
+      index:
+        title: "Menus"
+        title_content: "List menus"
+        search: "Search"
+        placeholder: "Search name of menu"
+        stt: "STT"
+        name: "Name"
+        link: "Link"
+        order: "Order"
+        status: "Status"
+        active: "Active"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "You sure delete?"
+        create: "New menu"
+      new:
+        title: "Menus"
+        title_content: "Create menu"
+      edit:
+        title: "Menus"
+        title_content: "Edit menu"
+        danger: "This menu is not exist."
+      form:
+        name: "Name"
+        link: "Link"
+        order: "Order"
+        status: "Status"
+        o: "On"
+        of: "Off"
+
+      create:
+        success: "Create menu success!"
+        error: "Create menu not success."
+      update:
+        success: "Update menu success!"
+        error: "Update menu not success."
+      destroy:
+        success: "Delete menu success!"
+        error: "Delete menu not success."
 
