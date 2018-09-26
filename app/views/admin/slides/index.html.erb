@@ -1,7 +1,7 @@
 <% provide :title, t(".title") %>
 <% provide :title_content, t(".title_content") %>
 <div class="title_right">
-  <%= form_tag admin_introduces_path, method: "get", enforce_utf8: false do %>
+  <%= form_tag admin_slides_path, method: "get", enforce_utf8: false do %>
     <div class="form-group top_search">
       <div class="input-group col-sm-12">
         <div class="col-sm-6">
@@ -17,7 +17,7 @@
     </div>
     <% if params[:search] %>
       <span class="results">
-        <%= t "admin.results.search" %> <%= @introduces.count %>
+        <%= t "admin.results.search" %> <%= @slides.count %>
       </span>
     <% end %>
   <% end %>
@@ -29,37 +29,39 @@
         <th><%= t ".stt" %></th>
         <th><%= t ".name" %></th>
         <th><%= t ".image" %></th>
-        <th><%= t ".description" %></th>
+        <th><%= t ".content" %></th>
+        <th><%= t ".link" %></th>
         <th colspan="2" ><%= t ".active" %></th>
       </tr>
     </thead>
     <tbody>
-      <% @introduces.each_with_index do |introduce, index| %>
+      <% @slides.each_with_index do |slide, index| %>
       <tr>
         <td>
           <%= create_index params[:page], index,
             Settings.paginate.per_page %>
         </td>
-        <td><%= introduce.name %></td>
-        <td><%= image_tag introduce.image_url.to_s, class: "image" %></td>
-        <td><%= introduce.description.truncate(50).html_safe %></td>
+        <td><%= slide.name %></td>
+        <td><%= image_tag slide.image_url.to_s, class: "image" %></td>
+        <td><%= slide.content %></td>
+        <td><%= slide.link %></td>
         <td align="center">
-          <%= link_to t(".edit"), edit_admin_introduce_path(introduce),
+          <%= link_to t(".edit"), edit_admin_slide_path(slide),
             class: "btn btn-success" %>
           <%= render "admin/plainpage/modal",
-            namepath: admin_introduce_path(@introduces.ids) %>
+            namepath: admin_slide_path(@slides.ids) %>
         </td>
       </tr>
     <% end %>
     </tbody>
   </table>
   <div align="right">
-    <%= paginate @introduces, theme: "twitter-bootstrap-3"%>
+    <%= paginate @slides, theme: "twitter-bootstrap-3"%>
   </div>
   <div class="row">
     <div class="col-md-4 text-left">
       <p class="pagination">
-        <%= link_to t(".create"), new_admin_introduce_path,
+        <%= link_to t(".create"), new_admin_slide_path,
           class: "btn btn-info" %>
       </p>
     </div>

@@ -2,8 +2,18 @@ paginate:
   per_page: 20
   rows: 5
 
+maximum:
+  name:
+    length: 50
+  image:
+    size: 5
+
 introduce:
   name:
     length: 50
   image:
     size: 5
+
+slide:
+  content:
+    length: 255
