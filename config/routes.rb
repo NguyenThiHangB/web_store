@@ -3,5 +3,6 @@ Rails.application.routes.draw do
     get "/plainpage", to: "plainpage#index"
     resources :introduces
     resources :menus
+    resources :slides
   end
 end

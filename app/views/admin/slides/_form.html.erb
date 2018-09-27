@@ -1,0 +1,51 @@
+<%= form_for [:admin, @slide], html: {multipart: true} do |f| %>
+  <div class="col-md-10 col-md-offset-1">
+    <%= form_group_for f, :name, label: false  do %>
+      <div class="form-group">
+        <%= f.label :name, class: "control-label" do %>
+          <%= t ".name" %>
+          <span class="red">*</span>
+        <% end %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+    <% end %>
+    <%= form_group_for f, :image, label: false  do %>
+      <div class="form-group">
+        <%= f.label :image, class: "control-label" do %>
+          <%= t ".image" %>
+          <span class="red">*</span>
+        <% end %>
+        <%= f.file_field :image, class: "form-control" %>
+      </div>
+    <% end %>
+    <div class="form-group">
+      <%= image_tag @slide.image_url.to_s, class: "image_form" %>
+    </div>
+    <%= form_group_for f, :content, label: false  do %>
+      <div class="form-group">
+        <%= f.label :content, class: "control-label" do %>
+          <%= t ".content" %>
+          <span class="red">*</span>
+        <% end %>
+        <%= f.text_field :content, class: "form-control" %>
+      </div>
+    <% end %>
+    <%= form_group_for f, :link, label: false  do %>
+      <div class="form-group">
+        <%= f.label :link, class: "control-label" do %>
+          <%= t ".link" %>
+          <span class="red">*</span>
+        <% end %>
+        <%= f.text_field :link, class: "form-control" %>
+      </div>
+    <% end %>
+    <div class="form-group">
+      <%= link_to t("admin.buttons.cancel"), admin_slides_path,
+        class: "btn btn-primary" %>
+      <%= submit_tag t("admin.buttons.reset"), type: :reset, name: :reset,
+        class: "btn btn-info" %>
+      <%= submit_tag t("admin.buttons.save"), type: :submit, name: :save,
+        class: "btn btn-success" %>
+    </div>
+  </div>
+<% end %>

@@ -43,6 +43,22 @@ en:
     image_size:
       max: "Image should be less than 5MB"
 
+    validates:
+      presence:
+        name: "Name can't be blank."
+        image: "Image can't be blank."
+        content: "Content can't be blank."
+        link: "Link can't be blank."
+        description: "Description can't be blank."
+        order: "Order can't be blank."
+        status: "Status can't be blank."
+      length:
+        name: "Name may not be greater than 50 character."
+        content: "Content may not be greater than 255 character."
+      uniqueness:
+        name: "Name has already been taken."
+        order: "Order has already been taken."
+
     results:
       search: "Results search"
 
@@ -119,7 +135,6 @@ en:
         status: "Status"
         o: "On"
         of: "Off"
-
       create:
         success: "Create menu success!"
         error: "Create menu not success."
@@ -129,4 +144,42 @@ en:
       destroy:
         success: "Delete menu success!"
         error: "Delete menu not success."
+
+    slides:
+      index:
+        title: "Slides"
+        title_content: "List slides"
+        search: "Search"
+        placeholder: "Search name or content of slide"
+        stt: "STT"
+        name: "Name"
+        image: "Image"
+        content: "Content"
+        link: "Link"
+        active: "Active"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "You sure delete?"
+        create: "New slide"
+      new:
+        title: "Slides"
+        title_content: "Create slide"
+      edit:
+        title: "Slides"
+        title_content: "Edit slide"
+        danger: "This slide is not exist."
+      form:
+        name: "Name"
+        image: "Image"
+        content: "Content"
+        link: "Link"
+      create:
+        success: "Create slide success!"
+        error: "Create slide not success."
+      update:
+        success: "Update slide success!"
+        error: "Update slide not success."
+      destroy:
+        success: "Delete slide success!"
+        error: "Delete slide not success."
 
