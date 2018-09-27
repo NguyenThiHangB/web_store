@@ -1,0 +1,50 @@
+<%= form_for [:admin, @group_product], html: {multipart: true} do |f| %>
+  <div class="col-md-10 col-md-offset-1">
+    <%= form_group_for f, :name, label: false  do %>
+      <div class="form-group">
+        <%= f.label :name, class: "control-label" do %>
+          <%= t ".name" %>
+          <span class="red">*</span>
+        <% end %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+    <% end %>
+    <%= form_group_for f, :content, label: false  do %>
+      <div class="form-group">
+        <%= f.label :content, class: "control-label" do %>
+          <%= t ".content" %>
+          <span class="red">*</span>
+        <% end %>
+        <%= f.text_field :content, class: "form-control" %>
+      </div>
+    <% end %>
+    <%= form_group_for f, :order, label: false  do %>
+      <div class="form-group">
+        <%= f.label :order, class: "control-label" do %>
+          <%= t ".order" %>
+          <span class="red">*</span>
+        <% end %>
+        <%= f.text_field :order, class: "form-control" %>
+      </div>
+    <% end %>
+    <%= form_group_for f, :status, label: false  do %>
+      <div class="form-group">
+        <%= f.label :status, class: "control-label" do %>
+          <%= t ".status" %>
+          <span class="red">*</span>
+        <% end %>
+        <br />
+        <%= f.radio_button :status, "On" %> <%= t ".o" %>&nbsp;&nbsp;&nbsp;
+        <%= f.radio_button :status, "Off" %> <%= t ".of" %>
+      </div>
+    <% end %>
+    <div class="form-group">
+      <%= link_to t("admin.buttons.cancel"), admin_group_products_path,
+        class: "btn btn-primary" %>
+      <%= submit_tag t("admin.buttons.reset"), type: :reset, name: :reset,
+        class: "btn btn-info" %>
+      <%= submit_tag t("admin.buttons.save"), type: :submit, name: :save,
+        class: "btn btn-success" %>
+    </div>
+  </div>
+<% end %>

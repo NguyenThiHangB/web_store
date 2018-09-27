@@ -13,10 +13,10 @@ class Admin::MenusController < ApplicationController
   def create
     @menu = Menu.new menu_params
     if @menu.save
-      flash[:success] = t ".success"
+      flash[:success] = t "admin.flash.create.success", title: "menu"
       redirect_to admin_menus_path
     else
-      flash[:error] = t ".error"
+      flash[:error] = t "admin.flash.create.error", title: "menu"
       render :new
     end
   end
@@ -25,19 +25,19 @@ class Admin::MenusController < ApplicationController
 
   def update
     if @menu.update_attributes menu_params
-      flash[:success] = t ".success"
+      flash[:success] = t "admin.flash.update.success", title: "menu"
       redirect_to admin_menus_path
     else
-      flash[:error] = t ".error"
+      flash[:error] = t "admin.flash.update.error", title: "menu"
       render :edit
     end
   end
 
   def destroy
     if @menu.destroy
-      flash[:success] = t ".success"
+      flash[:success] = t "admin.flash.destroy.success", title: "menu"
     else
-      flash[:error] = t ".error"
+      flash[:error] = t "admin.flash.destroy.error", title: "menu"
     end
     redirect_to admin_menus_path
   end

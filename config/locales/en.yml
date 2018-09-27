@@ -62,6 +62,17 @@ en:
     results:
       search: "Results search"
 
+    flash:
+      create:
+        success: "Create %{title} success!"
+        error: "Create %{title} not success."
+      update:
+        success: "Update %{title} success!"
+        error: "Update %{title} not success."
+      destroy:
+        success: "Delete %{title} success!"
+        error: "Delete %{title} not success."
+
     plainpage:
       index:
         title: "Admin"
@@ -95,15 +106,6 @@ en:
         name: "Name"
         image: "Image"
         description: "Description"
-      create:
-        success: "Create introduce success!"
-        error: "Create introduce not success."
-      update:
-        success: "Update introduce success!"
-        error: "Update introduce not success."
-      destroy:
-        success: "Delete introduce success!"
-        error: "Delete introduce not success."
 
     menus:
       index:
@@ -135,15 +137,6 @@ en:
         status: "Status"
         o: "On"
         of: "Off"
-      create:
-        success: "Create menu success!"
-        error: "Create menu not success."
-      update:
-        success: "Update menu success!"
-        error: "Update menu not success."
-      destroy:
-        success: "Delete menu success!"
-        error: "Delete menu not success."
 
     slides:
       index:
@@ -173,13 +166,33 @@ en:
         image: "Image"
         content: "Content"
         link: "Link"
-      create:
-        success: "Create slide success!"
-        error: "Create slide not success."
-      update:
-        success: "Update slide success!"
-        error: "Update slide not success."
-      destroy:
-        success: "Delete slide success!"
-        error: "Delete slide not success."
+
+    group_products:
+      index:
+        title: "Group Products"
+        title_content: "List group products"
+        search: "Search"
+        placeholder: "Search name or content of group products"
+        stt: "STT"
+        name: "Name"
+        content: "Content"
+        order: "Order"
+        status: "Status"
+        active: "Active"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "You sure delete?"
+        create: "New group product"
+      new:
+        title: "Group Products"
+        title_content: "Create group product"
+      edit:
+        title: "Group Products"
+        title_content: "Edit group product"
+        danger: "This slide is not exist."
+      form:
+        name: "Name"
+        content: "Content"
+        order: "Order"
+        status: "Status"
 

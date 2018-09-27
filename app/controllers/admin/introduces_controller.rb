@@ -13,10 +13,10 @@ class Admin::IntroducesController < ApplicationController
   def create
     @introduce = Introduce.new introduce_params
     if @introduce.save
-      flash[:success] = t ".success"
+      flash[:success] = t "admin.flash.create.success", title: "introduce"
       redirect_to admin_introduces_path
     else
-      flash[:error] = t ".error"
+      flash[:error] = t "admin.flash.create.error", title: "introduce"
       render :new
     end
   end
@@ -25,19 +25,19 @@ class Admin::IntroducesController < ApplicationController
 
   def update
     if @introduce.update_attributes introduce_params
-      flash[:success] = t ".success"
+      flash[:success] = t "admin.flash.update.success", title: "introduce"
       redirect_to admin_introduces_path
     else
-      flash[:error] = t ".error"
+      flash[:error] = t "admin.flash.update.error", title: "introduce"
       render :edit
     end
   end
 
   def destroy
     if @introduce.destroy
-      flash[:success] = t ".success"
+      flash[:success] = t "admin.flash.destroy.success", title: "introduce"
     else
-      flash[:error] = t ".error"
+      flash[:error] = t "admin.flash.destroy.error", title: "introduce"
     end
     redirect_to admin_introduces_path
   end
