@@ -44,3 +44,4 @@
 
 //= require flash.js
 //= require ckeditor/init
+//= require chosen-jquery

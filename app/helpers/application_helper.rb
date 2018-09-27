@@ -18,4 +18,9 @@ module ApplicationHelper
       concat errors_for form, field
     end
   end
+
+  def list_group_products
+    @group_products = GroupProduct.all.select(:id, :name)
+      .map{|group_product| [group_product.name, group_product.id]}
+  end
 end
