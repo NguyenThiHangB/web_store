@@ -76,7 +76,6 @@ ActiveRecord::Schema.define(version: 2018_09_20_033339) do
 
   create_table "group_products", force: :cascade do |t|
     t.string "name"
-    t.string "image"
     t.text "content"
     t.integer "order"
     t.integer "status"

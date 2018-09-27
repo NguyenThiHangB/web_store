@@ -13,10 +13,10 @@ class Admin::SlidesController < ApplicationController
   def create
     @slide = Slide.new slide_params
     if @slide.save
-      flash[:success] = t ".success"
+      flash[:success] = t "admin.flash.create.success", title: "slide"
       redirect_to admin_slides_path
     else
-      flash[:error] = t ".error"
+      flash[:error] = t "admin.flash.create.error", title: "slide"
       render :new
     end
   end
@@ -25,19 +25,19 @@ class Admin::SlidesController < ApplicationController
 
   def update
     if @slide.update_attributes slide_params
-      flash[:success] = t ".success"
+      flash[:success] = t "admin.flash.update.success", title: "slide"
       redirect_to admin_slides_path
     else
-      flash[:error] = t ".error"
+      flash[:error] = t "admin.flash.update.error", title: "slide"
       render :edit
     end
   end
 
   def destroy
     if @slide.destroy
-      flash[:success] = t ".success"
+      flash[:success] = t "admin.flash.destroy.success", title: "slide"
     else
-      flash[:error] = t ".error"
+      flash[:error] = t "admin.flash.destroy.error", title: "slide"
     end
     redirect_to admin_slides_path
   end
