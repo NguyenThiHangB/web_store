@@ -52,6 +52,10 @@ en:
         description: "Description can't be blank."
         order: "Order can't be blank."
         status: "Status can't be blank."
+        summary: "Summary can't be blank."
+        price: "Price can't be blank."
+        price_discount: "Price discount can't be blank."
+        group_product_id: "Group product can't be blank."
       length:
         name: "Name may not be greater than 50 character."
         content: "Content may not be greater than 255 character."
@@ -189,10 +193,49 @@ en:
       edit:
         title: "Group Products"
         title_content: "Edit group product"
-        danger: "This slide is not exist."
+        danger: "This group product is not exist."
       form:
         name: "Name"
         content: "Content"
         order: "Order"
         status: "Status"
+        o: "On"
+        of: "Off"
+
+    products:
+      index:
+        title: "Products"
+        title_content: "List products"
+        search: "Search"
+        placeholder: "Search name or summary of products"
+        stt: "STT"
+        name: "Name"
+        group_product: "Group product"
+        image: "Image"
+        summary: "Summary"
+        price: "Price"
+        price_discount: "Price discount"
+        status: "Status"
+        active: "Active"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "You sure delete?"
+        create: "New product"
+      new:
+        title: "Products"
+        title_content: "Create product"
+      edit:
+        title: "Products"
+        title_content: "Edit product"
+        danger: "This product is not exist."
+      form:
+        name: "Name"
+        group_product: "Group product"
+        image: "Image"
+        summary: "Summary"
+        price: "Price"
+        price_discount: "Price discount"
+        status: "Status"
+        o: "On"
+        of: "Off"
 

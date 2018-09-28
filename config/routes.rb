@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     resources :menus
     resources :slides
     resources :group_products
+    resources :products
   end
 end
