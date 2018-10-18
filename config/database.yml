@@ -4,7 +4,7 @@ default: &default
   pool: 5
   socket: /var/run/mysqld/mysqld.sock
   host: localhost
-  database: react_app
+  database: store_app
   username: root
   password: 123456
 
@@ -12,7 +12,7 @@ development:
   <<: *default
   variables:
     sql_mode: TRADITIONAL
-  database: react_app
+    database: store_app
 
 test:
   <<: *default

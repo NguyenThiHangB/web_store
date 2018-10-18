@@ -25,10 +25,14 @@ gem "sdoc", "~> 0.4.0", group: :doc
 gem "simple_form"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
+gem "mysql2"
 
 group :development, :test do
   gem "byebug", platforms: %i(mri mingw x64_mingw)
-  gem "sqlite3"
+  gem "faker"
+  gem "factory_bot_rails"
+  gem "pry-rails"
+  gem "pry-byebug"
 end
 
 group :development do
