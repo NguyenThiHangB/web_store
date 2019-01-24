@@ -1,0 +1,19 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV['POOL_CONNECTION'] ? ENV['POOL_CONNECTION'].to_i : 5 %>
+  socket: /var/run/mysqld/mysqld.sock
+  host: <%= ENV["DATABASE_HOST"] %>
+  database: <%= ENV["DATABASE_NAME"] %>
+  username: <%= ENV["DATABASE_USERNAME"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
+
+development:
+  <<: *default
+  database: development
+
+test:
+  <<: *default
+
+production:
+  <<: *default
