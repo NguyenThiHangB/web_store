@@ -37,7 +37,7 @@
         </div>
       </div>
     </div>
-    <% if @search_products %>
+    <% if params[:q] %>
       <span class="results">
         <%= t "admin.results.search" %> <%= @products.count %>
       </span>

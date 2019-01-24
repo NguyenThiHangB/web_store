@@ -36,6 +36,7 @@ config/environments/*.local.yml
 
 # Ignore application configuration
 /config/application.yml
+/config/database.yml
 
 # Ignore test files
 /test/*
